@@ -2,12 +2,15 @@
 chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
    function(tabs){
 	   if (tabs[0].url.split("=")[0].includes("youtube.com")){
+		   var ahmet_gidecek = tabs[0].url;
 		   var gidecek = tabs[0].url.split("=")[1];
- 		 var yol2='<iframe width="250px" height="60px" scrolling="no" style="border:none;" src="https://www.download-mp3-youtube.com/api/?api_key=MTczMTAyMTQ2&format=mp3&video_id='+gidecek+'"></iframe>';
-  		 document.getElementById("sayfaid").innerHTML = yol2;
+		 
+		 var ahmetet='<iframe src="http://www.recordmp3.co/#/watch?v='+gidecek+'&layout=button" style="width: 1000px; height: 40px; border: 0px;"></iframe>';
+		 
+		 document.getElementById("sayfaid").innerHTML = ahmetet;
   }
    }
-);
+);	
 		
 		
 		
